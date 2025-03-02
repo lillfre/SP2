@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - My Listings</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="/">Auction Site</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="/listings/">Listings</a>
+              </li>
+              <li class="nav-item">
+                <a id="profile-link" class="nav-link" href="/profile/"
+                  >Profile</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  id="create-listing-link"
+                  class="nav-link"
+                  href="/create-listing/"
+                  >Create Listing</a
+                >
+              </li>
+              <li class="nav-item">
+                <a id="dashboard-link" class="nav-link" href="/dashboard/"
+                  >Dashboard</a
+                >
+              </li>
+            </ul>
+            <div class="d-flex">
+              <a
+                href="/login/"
+                class="btn btn-outline-primary me-2"
+                id="login-btn"
+                >Login</a
+              >
+              <a href="/register/" class="btn btn-primary" id="register-btn"
+                >Register</a
+              >
+              <button class="btn btn-danger d-none" id="logout-btn">
+                Logout
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mt-4">
+      <h2 class="text-center">My Listings</h2>
+      <div id="loading-spinner" class="text-center mt-3">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+      <div id="user-listings" class="row mt-3"></div>
+    </main>
+
+    <footer class="text-center mt-5 p-3 bg-light">
+      <p>&copy; 2025 Auction Site | All rights reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/dashboard.js"></script>
+  </body>
+</html>
